@@ -57,23 +57,23 @@
                         "branch_icon": "\ue725 ",
                         "cherry_pick_icon": "\ue29b ",
                         "commit_icon": "\uf417 ",
-                        "fetch_status": false,
-                        "fetch_upstream_icon": false,
                         "merge_icon": "\ue727 ",
                         "no_commits_icon": "\uf0c3 ",
                         "rebase_icon": "\ue728 ",
                         "revert_icon": "\uf0e2 ",
-                        "tag_icon": "\uf412 "
+                        "tag_icon": "\uf412 ",
+                        "branch_template": "{{ trunc 25 .Branch }}",
+                        "fetch_status": false,
+                        "fetch_upstream_icon": true
                     },
                     "powerline_symbol": "\ue0b4",
-                    "template": " {{ .HEAD }}",
+                    "template": " {{ if .UpstreamURL }}{{ url .UpstreamIcon .UpstreamURL }} {{ end }} {{ .HEAD }}",
                     "type": "git"
                 }
             ],
             "type": "prompt"
         },
         {
-            "alignment": "right",
             "segments": [
                 {
                     "foreground": "p:text",
@@ -111,7 +111,7 @@
                     "type": "time"
                 }
             ],
-            "type": "prompt"
+            "type": "rprompt"
         }
     ],
     "console_title_template": "{{ .Shell }} in {{ .Folder }}",
