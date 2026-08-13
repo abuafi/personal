@@ -115,7 +115,7 @@
         }
     ],
     "console_title_template": "{{ .Shell }} in {{ .Folder }}",
-    "final_space": false,
+    "final_space": true,
     "transient_prompt": {
         "background": "p:pink",
         "foreground": "p:text",
