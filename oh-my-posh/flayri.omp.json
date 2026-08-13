@@ -46,7 +46,7 @@
                     },
                     "powerline_symbol": "\ue0b4",
                     "style": "powerline",
-                    "template": " {{ .Path }}",
+                    "template": " {{ path .Path .Location }}",
                     "type": "path"
                 },
                 {
@@ -114,7 +114,6 @@
             "type": "rprompt"
         }
     ],
-    "console_title_template": "{{ .Shell }} in {{ .Folder }}",
     "final_space": true,
     "transient_prompt": {
         "background": "p:pink",
